@@ -30,9 +30,25 @@ body {
  * Config box
  */
 .config {
+	position: absolute;
+	bottom: 10px;
+	right: 10px;
 	width: 300px;
-	background: #eee;
+	background: #efefef;
+	padding: 15px 20px;
+}
+.config div {
+	margin: 2px;
+}
+#launch {
+	margin: 0 0 10px 0 !important;
+}
+#slider {
+	margin: 5px 0 0 0 !important;
 }
 #frequency {
-	margin: 5px;
+	margin: 5px !important;
+}
+.pickers {
+	margin: 8px 0 !important;
 }
