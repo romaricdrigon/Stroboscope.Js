@@ -1,0 +1,32 @@
+/*
+ * Stroboscope.js stylesheet
+ */
+
+body {
+	/*background: #111;*/
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+/*
+ * Alert if Javascript is disabled
+ */
+.alert {
+	width: 400px;
+	margin: 300px auto;
+	padding: 40px 50px;
+	background: #eee;
+	color: red;
+	border: 2px solid red;
+	border-radius: 10px;
+	text-align: center;
+	font-weight: bold;
+	opacity: 0.9;
+}
+
+/*
+ * Config box
+ */
+.config {
+	background: #eee;
+	padding: 10px;
+}
