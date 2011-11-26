@@ -6,10 +6,10 @@
 	<link type="text/css" href="style.css" rel="stylesheet" />
 	<script type="text/javascript" src="stroboscope.js"></script>
 	<script type="text/javascript" src="jquery-1.6.4.min.js"></script>
-	<script type="text/javascript" src="jquery-ui.min.js"></script>
-	<script>
-		setConfig();
-	</script>
+	<!-- jQuery UI -->
+	<link type="text/css" href="css/smoothness/jquery-ui-1.8.16.custom.css" rel="Stylesheet" />	
+	<!--<script type="text/javascript" src="js/jquery-1.6.2.min.js"></script>-->
+	<script type="text/javascript" src="js/jquery-ui-1.8.16.custom.min.js"></script>
 </head>
 <body>
 	<noscript>
@@ -18,10 +18,16 @@
 		</div>
 	</noscript>
 	
-	<div id="config" class="config">
-		<script>
-			/*$("#config").slider();*/
-		</script>
+	<div class="config">
+		<div id="launch">
+			<button>Launch animation</button>
+		</div>
+		<div id="slider"></div>
+		<div id="frequency">1 BPM</div>
 	</div>
+	
+	<script>
+		setConfig();
+	</script>
 </body>
 </html>
