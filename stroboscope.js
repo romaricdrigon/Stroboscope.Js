@@ -1,4 +1,11 @@
 /*
+ * Stroboscope.js
+ * Code by Romaric Drigon
+ * http://github.com/romaricdrigon/
+ */
+
+
+/*
  * Globals
  */
 	strobo = {};
