@@ -12,7 +12,6 @@
 	strobo.blink = 0;
 	strobo.timer = null;
 	strobo.frequency = 1;
-	strobo.clock = null;
 	strobo.running = false;
 
 /*
@@ -158,15 +157,13 @@ function modifyStrobo() {
  * Sync the stroboscope using time
  */
 function syncStrobo() {
-	strobo.clock = window.setInterval(checkTime, 1000);
-}
-function checkTime() {
-	 var currentTime = new Date ();
-	 var currentSeconds = currentTime.getSeconds ();
-	 
-	 if (currentSeconds === 0)
-	 {
-	 	modifyStrobo();
-	 	window.clearInterval(strobo.clock);
-	 }
+	if (strobo.running === true) {
+		// will run during max 1 second, to sync the chrono
+		var _i = 0; // in case unable to get time, to prevent from an undefinite loop
+		while (((new Date().getMilliseconds() % 100) != 0) && (_i < 10000000)) {
+			_i++;
+		}
+	
+		modifyStrobo();
+	}
 }
