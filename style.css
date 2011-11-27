@@ -5,9 +5,10 @@
 body {
 	/*background: #111;*/
 	font-family: Arial, Helvetica, sans-serif;
-	width: 100%;
-	height: 100%;
+	width: 98%;
+	height: 98%;
 	background-color: #111;
+	margin: 1%;
 }
 
 /*
@@ -27,28 +28,36 @@ body {
 }
 
 /*
+ * Open button
+ */
+.open {
+	opacity: 0.6;
+}
+
+/*
  * Config box
  */
-.config {
-	position: absolute;
-	bottom: 10px;
-	right: 10px;
-	width: 300px;
-	background: #efefef;
-	padding: 15px 20px;
-}
-.config div {
-	margin: 2px;
-}
 #launch {
-	margin: 0 0 10px 0 !important;
+	margin: 10px auto 15px auto;
+	width: 200px;
 }
 #slider {
-	margin: 5px 0 0 0 !important;
+	margin: 5px 0 0 10px;
 }
 #frequency {
-	margin: 5px !important;
+	margin: 5px;
+}
+#sync {
+	margin: 10px auto 0 auto;
+	width: 150px;
 }
 .pickers {
 	margin: 8px 0 !important;
+}
+
+/*
+ * A small hack to jPicker
+ */
+.Container {
+	z-index: 1500 !important;
 }

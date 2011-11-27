@@ -20,22 +20,24 @@
 		</div>
 	</noscript>
 	
-	<div class="config">
+	<div class="config" id="config">
 		<div id="launch">
 			<button>Launch animation</button>
 		</div>
 		<div id="slider"></div>
 		<div id="frequency">1 BPM</div>
 		<div class="pickers">
-			First color: <span id="picker1"></span>&nbsp;-&nbsp;Second color:  <span id="picker2"></span>
+			First color: <span id="picker1"></span> - Second color:  <span id="picker2"></span>
 		</div>
 		<div id="sync">
 			<button>Synchronize</button>
 		</div>
 	</div>
 	
+	<div id="open" class="open">Open config dialog</div>
+	
 	<script>
-		setConfig();
+		$(function() {setConfig()}); // allow us to require jQuery and wait for load
 	</script>
 </body>
 </html>

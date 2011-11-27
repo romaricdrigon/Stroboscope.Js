@@ -11,7 +11,8 @@
 /*
  * Set the config area
  */
-function setConfig() {
+function setConfig() {	
+	// create the slider
 	$('#slider').slider({
 		max: 2000,
 		min: 1,
@@ -71,6 +72,18 @@ function setConfig() {
 		}
 
 	}, modifyStrobo);
+	
+	// open it as a dialog
+	$( "#config" ).dialog({
+		autoOpen: true,
+		minWidth: 250,
+		width: 350,
+		minHeight: 180
+	});
+
+	// link to the button
+	$('#open').button({icons: {primary: 'ui-icon-extlink'}});
+	$('#open').click(function() {$('#config').dialog('open'); return false;});
 }
 
 /*
@@ -121,6 +134,13 @@ function stopStrobo(skipButton) {
 	}
 }
 function modifyStrobo() {
+	// change background color
+	if (strobo.blink == 0) {
+		$('body').css('background', '#'+$.jPicker.List[0].color.active.val('hex'));
+	} else {
+		$('body').css('background', '#'+$.jPicker.List[1].color.active.val('hex'));		
+	}
+	
 	if (strobo.running == true) { // relaunch only if it was running
 		stopStrobo(true);
 		launchStrobo();
@@ -128,7 +148,7 @@ function modifyStrobo() {
 }
 
 /*
- * Let's the fun begin: will sync the stroboscope using time
+ * Sync the stroboscope using time
  */
 function syncStrobo() {
 	strobo.clock = window.setInterval(checkTime, 1000);
