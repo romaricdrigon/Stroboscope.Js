@@ -167,3 +167,24 @@ function syncStrobo() {
 		modifyStrobo();
 	}
 }
+
+/*
+ * Let's dance!
+ * Sync with music BPM
+ */
+function beatStrobo() {
+    var
+        dancer = new Dancer(),
+        kick = dancer.createKick({
+            onKick: function (mag) {
+                console.log('kick');
+                //$('body').css('background', '#'+$.jPicker.List[1].color.active.val('hex'));
+            },
+            offKick: function (mag) {
+                console.log('off');
+                //$('body').css('background', '#'+$.jPicker.List[0].color.active.val('hex'));
+            }
+        }).on(); // and kick in!
+
+    dancer.load({microphone: true});
+}
