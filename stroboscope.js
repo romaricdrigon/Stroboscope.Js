@@ -36,6 +36,10 @@ function setConfig() {
 	// synchronize button
 	$('button', '#sync').button();
 	$('#sync').click(syncStrobo);
+
+    // beat button
+    $('button', '#beat').button();
+    $('#beat').click(beatStrobo);
 	
 	// set the two color pickers
 	$('#picker1').jPicker({
@@ -187,4 +191,5 @@ function beatStrobo() {
         }).on(); // and kick in!
 
     dancer.load({microphone: true});
+    dancer.play(); // same bug even without
 }
