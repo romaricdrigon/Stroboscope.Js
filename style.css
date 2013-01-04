@@ -38,17 +38,11 @@ body {
  * Config box
  */
 #launch {
-	margin: 10px auto 15px auto;
+	margin: 5px auto;
 	width: 200px;
 }
-#slider {
-	margin: 5px 0 0 10px;
-}
-#frequency {
-	margin: 5px;
-}
 #sync {
-	margin: 10px auto 0 auto;
+	margin: 5px auto;
 	width: 150px;
 }
 #beat {
@@ -57,6 +51,18 @@ body {
 }
 .pickers {
 	margin: 8px 0 !important;
+}
+.itext {
+    font-style: italic;
+    font-size: 0.9em;
+    width: 100%;
+    text-align: center;
+    padding: 10px 0;
+}
+.stext {
+    width: 100%;
+    text-align: center;
+    padding: 5px 0;
 }
 
 /*

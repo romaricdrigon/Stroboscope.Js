@@ -20,19 +20,33 @@
 	</noscript>
 	
 	<div class="config" id="config">
-		<div id="launch">
-			<button>Launch animation</button>
-		</div>
-		<div id="slider"></div>
-		<div id="frequency">1 BPM</div>
+        <div class="itext">Here you can set up the colors used</div>
 		<div class="pickers">
 			First color: <span id="picker1"></span> - Second color:  <span id="picker2"></span>
 		</div>
+        <hr />
+        <div class="itext">Manual control</div>
+        <div id="launch">
+            <button>Launch animation</button>
+        </div>
+        <div id="frequency" class="stext">1 BPM</div>
+        <div id="slider"></div>
 		<div id="sync">
 			<button>Synchronize</button>
 		</div>
+        <hr />
+        <div class="itext">Under Chrome, you can use a microphone. Be sure to have "Web audio input" enabled in <a href="chrome://flags">chrome://flags</a></div>
         <div id="beat">
             <button>Use microphone</button>
+        </div>
+        <div>
+            <div id="beat-threshold" class="stext">Threshold: 0.001</div>
+            <div id="slider-threshold"></div>
+            <div id="beat-decay" class="stext">Decay: 0.0003</div>
+            <div id="slider-decay"></div>
+            <div id="beat-frequency" class="stext">Frequency: [0 - 10]</div>
+            <div id="slider-frequency"></div>
+            <div class="stext itext"><a href="#" id="reset-frequency">Reset frequency to [0,10] kHz</a></div>
         </div>
 	</div>
 	
